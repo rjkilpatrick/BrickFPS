@@ -1,0 +1,16 @@
+# Godot
+.import/
+export.cfg
+export_presets.cfg
+
+# Translation imports
+.translation
+
+# Binaries
+bin/
+build/
+lib/
+
+# Mono
+.mono/
+data_*/
