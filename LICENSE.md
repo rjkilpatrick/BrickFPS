@@ -1,4 +1,4 @@
-Assets found in `godot/assets/third-party/ldraw` are derivative assets from the official and unoffical LDraw parts libraries.
+Models (meshes) found in `Godot/Assets/third-party/ldraw` are derivative assets from the official and unoffical LDraw parts libraries.
 Distributed under the terms of the Creative Commons Attribution License version 2.0 (CC-BY 2.0) <https://creativecommons.org/licenses/by/2.0/legalcode>.
 
 *******************
