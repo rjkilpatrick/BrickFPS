@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/pistol (sights).dae-6bfd80b32b21069a2a32845cf9b49d8a.scn"
+path="res://.import/Pistol (sights).dae-ee8be8b55669fe0978124200206c4bff.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/pistol/pistol (sights).dae"
-dest_files=[ "res://.import/pistol (sights).dae-6bfd80b32b21069a2a32845cf9b49d8a.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Pistol/Pistol (sights).dae"
+dest_files=[ "res://.import/Pistol (sights).dae-ee8be8b55669fe0978124200206c4bff.scn" ]
 
 [params]
 

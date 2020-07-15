@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Gungan Patrol sheild 2.dae-249cc6813dd63b19eecaf9fe1b24382f.scn"
+path="res://.import/Gungan Patrol sheild 2.dae-229e8e1c9debadc83d768d5b82194128.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/Gungan Patrol sheild 2.dae"
-dest_files=[ "res://.import/Gungan Patrol sheild 2.dae-249cc6813dd63b19eecaf9fe1b24382f.scn" ]
+source_file="res://Assets/LDraw/Weapons/Gungan Patrol sheild 2.dae"
+dest_files=[ "res://.import/Gungan Patrol sheild 2.dae-229e8e1c9debadc83d768d5b82194128.scn" ]
 
 [params]
 

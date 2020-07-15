@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/DC-17.dae-0c826a44186bebb9008dda5c2f615ec4.scn"
+path="res://.import/DC-17.dae-e5436648cc066da227c99a75fe29ea3b.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/DC-17/DC-17.dae"
-dest_files=[ "res://.import/DC-17.dae-0c826a44186bebb9008dda5c2f615ec4.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/DC-17/DC-17.dae"
+dest_files=[ "res://.import/DC-17.dae-e5436648cc066da227c99a75fe29ea3b.scn" ]
 
 [params]
 

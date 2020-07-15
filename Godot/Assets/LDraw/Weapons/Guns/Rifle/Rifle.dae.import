@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/rifle.dae-440e44647ef377fcd846f8fd49bc76c5.scn"
+path="res://.import/Rifle.dae-5317b802824bd8d0ef7c3a165706e889.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/rifle/rifle.dae"
-dest_files=[ "res://.import/rifle.dae-440e44647ef377fcd846f8fd49bc76c5.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Rifle/Rifle.dae"
+dest_files=[ "res://.import/Rifle.dae-5317b802824bd8d0ef7c3a165706e889.scn" ]
 
 [params]
 

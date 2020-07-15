@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Grenade.dae-8d4e32e1bdcf31ccca7c54c706ac1a85.scn"
+path="res://.import/Grenade.dae-2e96b4db3b19a2418a8e1e73960fa38b.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/grenades/Grenade.dae"
-dest_files=[ "res://.import/Grenade.dae-8d4e32e1bdcf31ccca7c54c706ac1a85.scn" ]
+source_file="res://Assets/LDraw/Weapons/Grenades/Grenade.dae"
+dest_files=[ "res://.import/Grenade.dae-2e96b4db3b19a2418a8e1e73960fa38b.scn" ]
 
 [params]
 

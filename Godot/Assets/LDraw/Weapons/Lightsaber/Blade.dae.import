@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/blade.dae-e948b48e997668a529f3f0cf6d48cbbf.scn"
+path="res://.import/Blade.dae-44b48bddeeceb6c45506e1b192b83438.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/lightsaber/blade.dae"
-dest_files=[ "res://.import/blade.dae-e948b48e997668a529f3f0cf6d48cbbf.scn" ]
+source_file="res://Assets/LDraw/Weapons/Lightsaber/Blade.dae"
+dest_files=[ "res://.import/Blade.dae-44b48bddeeceb6c45506e1b192b83438.scn" ]
 
 [params]
 

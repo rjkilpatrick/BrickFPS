@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Din Djarin rifle.dae-9ab0b02aa151fa034ba146513ac58db8.scn"
+path="res://.import/Din Djarin rifle.dae-716ab4a34e2b0ca42d08a0d9e4c51582.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/mandalorian/Din Djarin rifle.dae"
-dest_files=[ "res://.import/Din Djarin rifle.dae-9ab0b02aa151fa034ba146513ac58db8.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Din Djarin rifle/Din Djarin rifle.dae"
+dest_files=[ "res://.import/Din Djarin rifle.dae-716ab4a34e2b0ca42d08a0d9e4c51582.scn" ]
 
 [params]
 

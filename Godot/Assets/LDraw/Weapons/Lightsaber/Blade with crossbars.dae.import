@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/blade with crossbars.dae-55d4e0d000a3184062077c3357d81aa1.scn"
+path="res://.import/Blade with crossbars.dae-fcea48a61a88c94cbac9d714c07ca3e8.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/lightsaber/blade with crossbars.dae"
-dest_files=[ "res://.import/blade with crossbars.dae-55d4e0d000a3184062077c3357d81aa1.scn" ]
+source_file="res://Assets/LDraw/Weapons/Lightsaber/Blade with crossbars.dae"
+dest_files=[ "res://.import/Blade with crossbars.dae-fcea48a61a88c94cbac9d714c07ca3e8.scn" ]
 
 [params]
 

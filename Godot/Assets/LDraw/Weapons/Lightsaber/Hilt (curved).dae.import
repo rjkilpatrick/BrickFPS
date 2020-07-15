@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/hilt (curved).dae-f733fa2a2ea2acabbb9621b9e6f05f8b.scn"
+path="res://.import/Hilt (curved).dae-f2192d7e6dfe60e59efffbf7f33e76f5.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/lightsaber/hilt (curved).dae"
-dest_files=[ "res://.import/hilt (curved).dae-f733fa2a2ea2acabbb9621b9e6f05f8b.scn" ]
+source_file="res://Assets/LDraw/Weapons/Lightsaber/Hilt (curved).dae"
+dest_files=[ "res://.import/Hilt (curved).dae-f2192d7e6dfe60e59efffbf7f33e76f5.scn" ]
 
 [params]
 

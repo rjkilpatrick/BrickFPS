@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/camera.dae-221da6abaa81d15282a50e21912e0cad.scn"
+path="res://.import/Camera.dae-3c40aed7a51bdea59fe2be932c308dfb.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/rocket launcher/camera.dae"
-dest_files=[ "res://.import/camera.dae-221da6abaa81d15282a50e21912e0cad.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Rocket Launcher/Camera.dae"
+dest_files=[ "res://.import/Camera.dae-3c40aed7a51bdea59fe2be932c308dfb.scn" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/submachine gun.dae-6722ee3ff6b1626781e7e07d32c2bd89.scn"
+path="res://.import/Submachine Gun.dae-44df0da9d91ad5e5b2af06aca55eaf2e.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/submachine gun/submachine gun.dae"
-dest_files=[ "res://.import/submachine gun.dae-6722ee3ff6b1626781e7e07d32c2bd89.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Submachine Gun/Submachine Gun.dae"
+dest_files=[ "res://.import/Submachine Gun.dae-44df0da9d91ad5e5b2af06aca55eaf2e.scn" ]
 
 [params]
 

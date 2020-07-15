@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/long blaster.dae-ffea9e6e311faa5905f65a036a8fcb33.scn"
+path="res://.import/Long Blaster.dae-8719209eb4953f19c1c4318b8aa7b2cb.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/sniper/long blaster.dae"
-dest_files=[ "res://.import/long blaster.dae-ffea9e6e311faa5905f65a036a8fcb33.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Sniper/Long Blaster.dae"
+dest_files=[ "res://.import/Long Blaster.dae-8719209eb4953f19c1c4318b8aa7b2cb.scn" ]
 
 [params]
 

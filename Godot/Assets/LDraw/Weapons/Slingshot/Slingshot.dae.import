@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/slingshot.dae-e2cd69f74486d48b658684d17b4a49ff.scn"
+path="res://.import/Slingshot.dae-c598ddc7e9cffdf2f34e93e32b6099ea.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/slingshot/slingshot.dae"
-dest_files=[ "res://.import/slingshot.dae-e2cd69f74486d48b658684d17b4a49ff.scn" ]
+source_file="res://Assets/LDraw/Weapons/Slingshot/Slingshot.dae"
+dest_files=[ "res://.import/Slingshot.dae-c598ddc7e9cffdf2f34e93e32b6099ea.scn" ]
 
 [params]
 

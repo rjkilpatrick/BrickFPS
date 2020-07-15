@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/pistol (two barrel).dae-01e1bf6391815e283d44a85567c75c12.scn"
+path="res://.import/Pistol (two barrel).dae-a671450c2689283b56797af0d43abd8e.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/pistol/pistol (two barrel).dae"
-dest_files=[ "res://.import/pistol (two barrel).dae-01e1bf6391815e283d44a85567c75c12.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Pistol/Pistol (two barrel).dae"
+dest_files=[ "res://.import/Pistol (two barrel).dae-a671450c2689283b56797af0d43abd8e.scn" ]
 
 [params]
 

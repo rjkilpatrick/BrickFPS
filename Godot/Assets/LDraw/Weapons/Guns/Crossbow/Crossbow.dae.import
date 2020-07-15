@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/crossbow.dae-1aa871dc5a039f8c53bd1acf0ff37489.scn"
+path="res://.import/Crossbow.dae-14eeb5692bfcdd3d311d1ad9518d8d43.scn"
 
 [deps]
 
-source_file="res://assets/ldraw/weapons/guns/crossbow/crossbow.dae"
-dest_files=[ "res://.import/crossbow.dae-1aa871dc5a039f8c53bd1acf0ff37489.scn" ]
+source_file="res://Assets/LDraw/Weapons/Guns/Crossbow/Crossbow.dae"
+dest_files=[ "res://.import/Crossbow.dae-14eeb5692bfcdd3d311d1ad9518d8d43.scn" ]
 
 [params]
 
