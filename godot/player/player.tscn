@@ -1,41 +1,36 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
+[ext_resource path="res://characters/Minifigure.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.617732
-height = 1.17966
+radius = 0.356874
+height = 0.7
 
-[sub_resource type="RayShape" id=2]
-length = 0.5
-
-[sub_resource type="CapsuleMesh" id=3]
-radius = 0.5
-mid_height = 1.4
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.36, 0.08, 0.22 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
 
 [node name="BodyCollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.3, 0 )
 shape = SubResource( 1 )
 
 [node name="FeetCollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.5, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, -0.02 )
 shape = SubResource( 2 )
 
 [node name="CameraTarget" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.981, 0.969, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.96, 0 )
 
 [node name="Camera" type="Camera" parent="CameraTarget"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.36283 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
 fov = 80.0
 near = 0.1
 
 [node name="AimCast" type="RayCast" parent="CameraTarget/Camera"]
 cast_to = Vector3( 0, 0, -100 )
 
-[node name="CharacterMesh" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 3 )
-material/0 = null
+[node name="Minifigure" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )

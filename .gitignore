@@ -14,3 +14,6 @@ lib/
 # Mono
 .mono/
 data_*/
+
+# Blender
+*.blend[1-9]

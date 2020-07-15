@@ -13,7 +13,7 @@ enum { # TODO: Implement movement state machine
 }
 
 onready var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
-export var DEFAULT_MOVE_SPEED = 10
+export var DEFAULT_MOVE_SPEED = 5.0
 onready var JUMP_SPEED = 0.5 * ProjectSettings.get_setting("physics/3d/default_gravity")
 const WALK_ACCELERATION = 10
 const DEACCELERATION = 10
