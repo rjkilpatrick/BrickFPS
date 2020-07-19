@@ -2,6 +2,8 @@
 
 This project aims to create a similar game to Star Wars: Battlefront (2004) using LEGO style assets.
 
+![Screenshot of characters running in engine](All_Characters.jpg)
+
 ## Licensing
 
 If at any point you believe this project contains copyrighted or wrongly attributed material, please create an [issue](https://github.com/rjkilpatrick/BrickFPS/issues) and it will be removed.
