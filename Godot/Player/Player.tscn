@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Characters/Minifigure.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/HUD/Chatbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/HUD/FpsCounter.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.356874
@@ -43,8 +44,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="WeaponsDisplay" type="Control" parent="HUD"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameProgress" type="Control" parent="HUD"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerStatus" type="Control" parent="HUD"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minimap" type="Control" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+
 [node name="Chatbox" parent="HUD" instance=ExtResource( 3 )]
 anchor_left = 1.0
 anchor_top = 1.0
 margin_left = -340.0
 margin_top = -425.0
+
+[node name="FpsCounter" parent="HUD" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
