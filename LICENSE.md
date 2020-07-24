@@ -1,9 +1,8 @@
-Models (meshes) found in `Godot/Assets/third-party/ldraw` are derivative assets from the official and unoffical LDraw parts libraries.
-Distributed under the terms of the Creative Commons Attribution License version 2.0 (CC-BY 2.0) <https://creativecommons.org/licenses/by/2.0/legalcode>.
+**This license does not include assets and their derivatives within `godot/assets/third_party`**
 
 *******************
 
-All code unless otherwise specified is Copyright (c) 2020 John Kilpatrick.
+Copyright (c) 2020 John Kilpatrick.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
