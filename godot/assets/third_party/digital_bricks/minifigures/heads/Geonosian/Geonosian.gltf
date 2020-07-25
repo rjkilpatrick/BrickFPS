@@ -1,0 +1,110 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.2.75",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Object.002"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                0,
+                0,
+                0
+            ],
+            "name" : "Tan-material.004",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8941180109977722,
+                    0.8039219975471497,
+                    0.6196079850196838,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "92751_dat.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 953,
+            "max" : [
+                0.3074199855327606,
+                0.6985015273094177,
+                0.5523979067802429
+            ],
+            "min" : [
+                -0.3074199855327606,
+                -0.0606982484459877,
+                -0.3847220242023468
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 953,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 3672,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 11436,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 11436,
+            "byteOffset" : 11436
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7344,
+            "byteOffset" : 22872
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 30216,
+            "uri" : "Geonosian.bin"
+        }
+    ]
+}
