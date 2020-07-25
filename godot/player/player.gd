@@ -1,4 +1,4 @@
-extends KinematicBody
+extends Actor
 
 var paused = false
 
