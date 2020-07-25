@@ -2,7 +2,7 @@
 
 This project aims to create a similar game to Star Wars: Battlefront (2004) using LEGO style assets.
 
-![Screenshot of characters running in engine](All_Characters.jpg)
+![Screenshot of characters running in engine](all_characters.jpg)
 
 ## Licensing
 
