@@ -22,8 +22,8 @@ func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		leave_chatbox()
 
-func add_message(player_name: String, text: String):
-	chat_log.bbcode_text += "\n" + player_name + ": " + text
+func add_message(_player_name: String, text: String):
+	chat_log.bbcode_text += "\n" + _player_name + ": " + text
 
 func enter_chatbox():
 	container.visible = true
