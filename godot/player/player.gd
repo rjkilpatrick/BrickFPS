@@ -47,6 +47,7 @@ export var health = 100
 # -----------------------
 # UI
 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -57,13 +58,18 @@ func _ready():
 	# Setup animation tree
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
+	._physics_process(delta)
+	
 	process_input(delta)
 	process_movement(delta)
-	process_UI(delta)
 
 
-func process_input(delta):
+func _process(delta: float) -> void:
+	update_hud(delta)
+
+
+func process_input(delta: float) -> void:
 	# -----------------------
 	# Movement
 	var input_vector = Vector2(
@@ -92,6 +98,7 @@ func process_input(delta):
 		pass
 		move_state = CROUCH
 
+
 func _input(event):
 	# -----------------------
 	# Mouse movement
@@ -103,7 +110,7 @@ func _input(event):
 		camera_target.rotation.x = clamp(camera_target.rotation.x, -deg2rad(70), deg2rad(90))
 
 
-func process_movement(delta):
+func process_movement(delta: float) -> void:
 	target_direction = target_direction.normalized()
 	
 	velocity += delta *  GRAVITY
@@ -138,5 +145,5 @@ func process_movement(delta):
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
 
 
-func process_UI(delta):
+func update_hud(delta: float) -> void:
 	pass
