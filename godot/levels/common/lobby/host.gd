@@ -14,6 +14,7 @@ func _on_HostButton_pressed() -> void:
 	var err = Network.create_server()
 	match err:
 		OK:
+			print("Server running on " + ip)
 			get_tree().change_scene("res://levels/common/lobby/lobby.tscn")
 		_:
 			host_status.text = "Unable to create server on " + ip + " for an " \

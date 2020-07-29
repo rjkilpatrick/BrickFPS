@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://levels/common/lobby/Join.gd" type="Script" id=1]
-[ext_resource path="res://levels/common/lobby/Host.gd" type="Script" id=2]
+[ext_resource path="res://levels/common/lobby/join.gd" type="Script" id=1]
+[ext_resource path="res://levels/common/lobby/host.gd" type="Script" id=2]
 
 [node name="PreLobby" type="Control"]
 anchor_right = 1.0

@@ -1,5 +1,6 @@
 # Simple networking implementation
 # Creates a server or client on the local godot instance
+# Handles peer connections etc.
 #
 # Adapted from code (c) Juan Linietsky, Ariel Manzur and the Godot community; revision 38a49756
 # https://docs.godotengine.org/en/3.2/tutorials/networking/high_level_multiplayer.html
@@ -10,6 +11,9 @@ const DEFAULT_IP = "127.0.0.1"
 const DEFAULT_PORT = 31400
 
 var is_host = false
+var self_id
+
+var peer_list = {}
 
 
 func create_server(port := DEFAULT_PORT, max_players := 32) -> int:
@@ -20,6 +24,8 @@ func create_server(port := DEFAULT_PORT, max_players := 32) -> int:
 	var err = peer.create_server(port, max_players)
 	if err == OK:
 		get_tree().network_peer = peer
+		self_id = get_tree().get_network_unique_id()
+		assert(get_tree().is_network_server())
 	return err
 
 
@@ -30,6 +36,6 @@ func create_client(server_ip := "127.0.0.1", port := DEFAULT_PORT) -> int:
 	var err = peer.create_client(server_ip, port)
 	if err == OK:
 		get_tree().network_peer = peer
+		self_id = get_tree().get_network_unique_id()
+		assert(not get_tree().is_network_server())
 	return err
-
-# TODO: Rename each Actor to `get_tree().get_unique_id()`
