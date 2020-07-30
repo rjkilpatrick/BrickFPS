@@ -36,6 +36,8 @@ var MOUSE_SENSITIVITY = 0.1
 onready var camera_target = $"CameraTarget"
 onready var camera = $"CameraTarget/Camera"
 
+var mouse_captured = false
+
 # -----------------------
 # Properties
 export var MAX_HEALTH = 150
@@ -47,7 +49,9 @@ export var health = 100
 # -----------------------
 # UI
 
+
 func _ready():
+	._ready()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	# Handle character selected
@@ -57,13 +61,18 @@ func _ready():
 	# Setup animation tree
 
 
-func _physics_process(delta):
+func _process(delta: float) -> void:
+	update_hud(delta)
+
+
+func _physics_process(delta: float) -> void:
 	process_input(delta)
 	process_movement(delta)
-	process_UI(delta)
+	
+	if is_online:
+		rset("puppet_velocity", velocity)
 
-
-func process_input(delta):
+func process_input(delta: float) -> void:
 	# -----------------------
 	# Movement
 	var input_vector = Vector2(
@@ -77,7 +86,7 @@ func process_input(delta):
 	target_direction += transform.basis.z * input_vector.y
 	
 	# Jumping
-	if Input.is_action_just_pressed("move_jump") and is_on_floor():
+	if Input.is_action_just_pressed("move_jump") and is_on_floor(): #or is_on_wall():
 		velocity.y = JUMP_SPEED
 		pass
 		move_state = JUMP
@@ -91,6 +100,14 @@ func process_input(delta):
 	if Input.is_action_pressed("crouch"):
 		pass
 		move_state = CROUCH
+	
+	if Input.is_action_just_pressed("pause"):
+		if mouse_captured:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		mouse_captured = not mouse_captured
+
 
 func _input(event):
 	# -----------------------
@@ -103,7 +120,7 @@ func _input(event):
 		camera_target.rotation.x = clamp(camera_target.rotation.x, -deg2rad(70), deg2rad(90))
 
 
-func process_movement(delta):
+func process_movement(delta: float) -> void:
 	target_direction = target_direction.normalized()
 	
 	velocity += delta *  GRAVITY
@@ -136,7 +153,7 @@ func process_movement(delta):
 	velocity.z = hvel.z
 	
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
+		
 
-
-func process_UI(delta):
+func update_hud(delta: float) -> void:
 	pass

@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://menu/lobby.gd" type="Script" id=1]
+
+[sub_resource type="NoiseTexture" id=1]
+width = 250
+height = 250
+
+[sub_resource type="StyleBoxLine" id=2]
+color = Color( 1, 1, 1, 1 )
+vertical = true
+
+[node name="Lobby" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 62.0
+margin_top = 70.0
+margin_right = -62.0
+margin_bottom = -70.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1796.0
+margin_bottom = 48.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "
+Lobby
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainPanel" type="HBoxContainer" parent="."]
+margin_top = 52.0
+margin_right = 1796.0
+margin_bottom = 916.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchInfo" type="VBoxContainer" parent="MainPanel"]
+margin_right = 892.0
+margin_bottom = 864.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ServerOwner" type="Label" parent="MainPanel/MatchInfo"]
+margin_right = 892.0
+margin_bottom = 14.0
+text = "Party leader: [Player]"
+
+[node name="MapTextureRect" type="TextureRect" parent="MainPanel/MatchInfo"]
+margin_top = 18.0
+margin_right = 892.0
+margin_bottom = 268.0
+texture = SubResource( 1 )
+
+[node name="MapSelector" type="OptionButton" parent="MainPanel/MatchInfo"]
+margin_top = 272.0
+margin_right = 892.0
+margin_bottom = 292.0
+
+[node name="VSeparator" type="VSeparator" parent="MainPanel"]
+margin_left = 896.0
+margin_right = 900.0
+margin_bottom = 864.0
+custom_styles/separator = SubResource( 2 )
+
+[node name="PlayerList" type="VBoxContainer" parent="MainPanel"]
+margin_left = 904.0
+margin_right = 1796.0
+margin_bottom = 864.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="."]
+margin_top = 920.0
+margin_right = 1796.0
+margin_bottom = 940.0
+text = "Start game"
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]

@@ -22,4 +22,4 @@ These can be in the corresponding assets folders.
 
 ### Code
 
-All code is licensed under the [MIT License](godot/LICENSE).
+All code unless otherwise specified, is licensed under the [MIT License](LICENSE.md).

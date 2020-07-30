@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/hud/chatbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/hud/fps_counter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://actor/actor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/player.gd" type="Script" id=4]
-[ext_resource path="res://assets/third_party/digital_bricks/minifigures/heads/Chewbacca/Chewbacca Head.gltf" type="PackedScene" id=5]
 
 [node name="Player" instance=ExtResource( 3 )]
 script = ExtResource( 4 )
@@ -72,8 +71,5 @@ anchor_bottom = 0.5
 margin_left = -40.0
 margin_top = -20.0
 margin_bottom = 20.0
-
-[node name="Minicharacter" parent="." index="5"]
-minifigure = ExtResource( 5 )
 
 [editable path="Minifigure"]
