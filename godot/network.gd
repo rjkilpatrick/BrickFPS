@@ -9,6 +9,7 @@ extends Node
 
 const DEFAULT_IP = "127.0.0.1"
 const DEFAULT_PORT = 31400
+const SERVER_ID = 1 # Server ID is always 1 in NetworkedMultiplayerENet
 
 var is_host = false
 var self_id

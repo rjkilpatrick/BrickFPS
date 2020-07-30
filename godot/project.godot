@@ -21,13 +21,14 @@ _global_script_class_icons={
 [application]
 
 config/name="BrickFPS"
-run/main_scene="res://levels/test_level.tscn"
+run/main_scene="res://menu/prelobby.tscn"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
 Network="*res://network.gd"
+GameLoader="*res://game_manager.gd"
 
 [display]
 

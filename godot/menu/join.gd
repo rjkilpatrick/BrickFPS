@@ -3,9 +3,18 @@ extends Tabs
 onready var join_address = $JoinAddress
 onready var join_status = $JoinStatus
 
+var _server_is_connected = false
+
 
 func _ready() -> void:
 	join_address.text = IP.get_local_addresses()[0] # TODO: Remove magic number
+	get_tree().connect("connected_to_server", self, "_connected_to_server")
+
+
+func _connected_to_server() -> void:
+	if OS.is_debug_build():
+		print("Connected to server")
+	_server_is_connected = true
 
 
 func _on_JoinButton_pressed() -> void:
@@ -19,7 +28,8 @@ func _on_JoinButton_pressed() -> void:
 	var err = Network.create_client(ip_address)
 	match err:
 		OK:
-			if get_tree().change_scene("res://levels/common/lobby/lobby.tscn") != OK:
+			#TODO: Add waiting screen until server connects
+			if get_tree().change_scene("res://menu/lobby.tscn") != OK:
 				join_status.text = "Lobby scene is broken."
 		ERR_ALREADY_IN_USE:
 			join_status.text = "You are already connected to server, please " \
