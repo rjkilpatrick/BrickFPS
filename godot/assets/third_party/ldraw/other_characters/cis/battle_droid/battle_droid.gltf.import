@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Minifigure.gltf-41700722f064f4d3759acbe1ae5de443.scn"
+path="res://.import/battle_droid.gltf-06d66dd38e4b9ff0b745b00e78c1f099.scn"
 
 [deps]
 
-source_file="res://assets/third_party/ldraw/minifigures/Minifigure/Minifigure.gltf"
-dest_files=[ "res://.import/Minifigure.gltf-41700722f064f4d3759acbe1ae5de443.scn" ]
+source_file="res://assets/third_party/ldraw/other_characters/cis/battle_droid/battle_droid.gltf"
+dest_files=[ "res://.import/battle_droid.gltf-06d66dd38e4b9ff0b745b00e78c1f099.scn" ]
 
 [params]
 

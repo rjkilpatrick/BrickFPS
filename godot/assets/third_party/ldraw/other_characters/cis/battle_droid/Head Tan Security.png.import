@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Torso Tan Security.png-b662be6c3e71323160dba286446d61a7.stex"
+path="res://.import/Head Tan Security.png-1dac618af906220d1bdd60f54e39cfaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/third_party/ldraw/other_characters/cis/Battle Droid/Torso Tan Security.png"
-dest_files=[ "res://.import/Torso Tan Security.png-b662be6c3e71323160dba286446d61a7.stex" ]
+source_file="res://assets/third_party/ldraw/other_characters/cis/battle_droid/Head Tan Security.png"
+dest_files=[ "res://.import/Head Tan Security.png-1dac618af906220d1bdd60f54e39cfaa.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Battle Droid.gltf-fbaa84455d63110ad39a74f6ba1e3025.scn"
+path="res://.import/Battle Droid.dae-b8a98bbee687598aab668f83c1723f8a.scn"
 
 [deps]
 
-source_file="res://assets/third_party/ldraw/other_characters/cis/Battle Droid/Battle Droid.gltf"
-dest_files=[ "res://.import/Battle Droid.gltf-fbaa84455d63110ad39a74f6ba1e3025.scn" ]
+source_file="res://assets/third_party/ldraw/other_characters/cis/battle_droid/Battle Droid.dae"
+dest_files=[ "res://.import/Battle Droid.dae-b8a98bbee687598aab668f83c1723f8a.scn" ]
 
 [params]
 

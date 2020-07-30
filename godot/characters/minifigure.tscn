@@ -1,9 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/third_party/ldraw/minifigures/Minifigure/Minifigure.gltf" type="PackedScene" id=1]
-
-
-
+[ext_resource path="res://assets/third_party/ldraw/minifigures/minifigure/minifigure.gltf" type="PackedScene" id=1]
 
 
 
