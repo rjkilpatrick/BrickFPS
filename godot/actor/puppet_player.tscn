@@ -3,6 +3,5 @@
 [ext_resource path="res://actor/actor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://actor/puppet_player.gd" type="Script" id=2]
 
-
 [node name="Actor" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
