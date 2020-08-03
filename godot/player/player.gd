@@ -27,6 +27,7 @@ var is_mouse_captured = false setget _set_mouse_captured
 
 # -----------------------
 # Weapons
+onready var aim_cast = $CameraTarget/Camera/AimCast
 
 # -----------------------
 # UI
@@ -89,6 +90,16 @@ func process_input(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("pause"):
 		self.is_paused = not self.is_paused
+	
+	# -----------------------
+	# Interacting
+	if Input.is_action_just_pressed("interact"):
+		aim_cast.force_raycast_update()
+		
+		if aim_cast.is_colliding():
+			var target = aim_cast.get_collider()
+			if target.has_method("interact"):
+				target.interact(self)
 
 
 func _input(event: InputEvent) -> void:
@@ -135,6 +146,7 @@ func process_movement(delta: float) -> void:
 	velocity.z = hvel.z
 	
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
+	# TODO: <https://kidscancode.org/godot_recipes/physics/kinematic_to_rigidbody/>
 
 
 func _set_pause(new_pause: bool) -> void:

@@ -20,7 +20,7 @@ fov = 80.0
 near = 0.1
 
 [node name="AimCast" type="RayCast" parent="CameraTarget/Camera" index="0"]
-cast_to = Vector3( 0, 0, -100 )
+cast_to = Vector3( 0, 0, -1000 )
 
 [node name="HUD" type="Control" parent="." index="4"]
 anchor_right = 1.0
