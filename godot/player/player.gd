@@ -70,8 +70,10 @@ func _physics_process(delta: float) -> void:
 	process_movement(delta)
 	
 	if is_online:
-		rset("puppet_velocity", velocity)
+		rset_unreliable("puppet_position", global_transform.origin)
+		rset_unreliable("puppet_velocity", velocity)
 		rset_unreliable("puppet_rotation", rotation)
+
 
 func process_input(delta: float) -> void:
 	# -----------------------
