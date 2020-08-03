@@ -12,36 +12,19 @@ enum { # TODO: Implement movement state machine
 	JUMP,
 }
 
-onready var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
-export var DEFAULT_MOVE_SPEED = 5.0
-onready var JUMP_SPEED = 0.5 * ProjectSettings.get_setting("physics/3d/default_gravity")
-const WALK_ACCELERATION = 10
-const DEACCELERATION = 10
-
-onready var MAX_SPRINT_SPEED = DEFAULT_MOVE_SPEED * 1.5
-const SPRINT_ACCELERATION = WALK_ACCELERATION * 1.5
-
-onready var CROUCH_MOVE_SPEED = DEFAULT_MOVE_SPEED * 0.6
+var move_state = IDLE
 
 var target_direction = Vector3.ZERO
-var velocity = Vector3.ZERO
 var hvel = Vector3.ZERO
-
-var move_state = IDLE
 
 # -----------------------
 # Camera controls
 export var DEFAULT_MOUSE_SENSITIVITY = 0.1
-var MOUSE_SENSITIVITY = 0.1
+var _mouse_sensitivity = DEFAULT_MOUSE_SENSITIVITY
 onready var camera_target = $"CameraTarget"
 onready var camera = $"CameraTarget/Camera"
 
 var mouse_captured = false
-
-# -----------------------
-# Properties
-export var MAX_HEALTH = 150
-export var health = 100
 
 # -----------------------
 # Weapons
@@ -112,14 +95,14 @@ func process_input(delta: float) -> void:
 		mouse_captured = not mouse_captured
 
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	# -----------------------
 	# Mouse movement
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Rotate around self when moving in viewport x-plane
-		self.rotate_y(deg2rad(event.relative.x * MOUSE_SENSITIVITY * -1))
+		self.rotate_y(deg2rad(event.relative.x * _mouse_sensitivity * -1))
 		# Rotate camera about gimbal (target) when mouse moves in y-plane
-		camera_target.rotate_x(deg2rad(event.relative.y * MOUSE_SENSITIVITY * -1))
+		camera_target.rotate_x(deg2rad(event.relative.y * _mouse_sensitivity * -1))
 		camera_target.rotation.x = clamp(camera_target.rotation.x, -deg2rad(70), deg2rad(90))
 
 
@@ -156,7 +139,7 @@ func process_movement(delta: float) -> void:
 	velocity.z = hvel.z
 	
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
-		
+
 
 func update_hud(delta: float) -> void:
 	pass

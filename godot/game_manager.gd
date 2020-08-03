@@ -5,6 +5,8 @@ extends Node
 var players_configured := []
 var level: Node
 
+var ai_count := 0
+
 # -----------------
 # Loading game
 remote func configure_level(which_level: String):
@@ -29,6 +31,15 @@ remote func configure_level(which_level: String):
 		actor.set_network_master(id)
 		actor.set_name(str(id))
 		player_spawn.add_child(actor)
+	
+	# Load AI
+	var ai_scene = load("res://actor/ai_player.tscn")
+	for index in range(0, ai_count):
+		assert(false) # FIX
+		var ai = actor_scene.instance()
+		ai.set_network_master(Network.SERVER_ID)
+		ai.set_name("ai" + str(index))
+		player_spawn.add_child(ai)
 	
 	
 	rpc_id(Network.SERVER_ID, "done_configuring")
