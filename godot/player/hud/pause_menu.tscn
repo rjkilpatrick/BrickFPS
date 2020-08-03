@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://player/hud/pause_menu.gd" type="Script" id=1]
+
+[node name="PauseMenu" type="Popup"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -696.0
+margin_top = -369.0
+margin_right = 696.0
+margin_bottom = 369.0
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+margin_right = 1392.0
+margin_bottom = 20.0
+text = "Resume game"
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_Resume_pressed"]

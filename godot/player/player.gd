@@ -1,6 +1,6 @@
 extends Actor
 
-var paused = false
+var is_paused := false setget _set_pause
 
 # -----------------------
 # Movement
@@ -23,17 +23,17 @@ export var DEFAULT_MOUSE_SENSITIVITY = 0.1
 var _mouse_sensitivity = DEFAULT_MOUSE_SENSITIVITY
 onready var camera_target = $"CameraTarget"
 onready var camera = $"CameraTarget/Camera"
-
-var mouse_captured = false
+var is_mouse_captured = false setget _set_mouse_captured
 
 # -----------------------
 # Weapons
 
 # -----------------------
 # UI
+onready var pause_menu = $HUD/PauseMenu
 
 
-func _ready():
+func _ready() -> void:
 	._ready()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -88,11 +88,7 @@ func process_input(delta: float) -> void:
 		move_state = CROUCH
 	
 	if Input.is_action_just_pressed("pause"):
-		if mouse_captured:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		mouse_captured = not mouse_captured
+		self.is_paused = not self.is_paused
 
 
 func _input(event: InputEvent) -> void:
@@ -141,5 +137,29 @@ func process_movement(delta: float) -> void:
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
 
 
+func _set_pause(new_pause: bool) -> void:
+	is_paused = new_pause
+	if is_paused:
+		self.is_mouse_captured = true
+		self.pause_mode = PAUSE_MODE_STOP
+		pause_menu.popup()
+	else:
+		self.is_mouse_captured = false
+		self.pause_mode = PAUSE_MODE_INHERIT
+		pause_menu.hide()
+
+
+func _set_mouse_captured(new_is_captured: bool) -> void:
+	is_mouse_captured = new_is_captured
+	if is_mouse_captured:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
 func update_hud(delta: float) -> void:
 	pass
+
+
+func _on_PauseMenu_popup_hide() -> void:
+	self.is_paused = false
