@@ -9,8 +9,10 @@
 [node name="Player" instance=ExtResource( 3 )]
 script = ExtResource( 4 )
 
-[node name="CameraTarget" type="Spatial" parent="." index="3"]
+[node name="CameraTarget" type="SpringArm" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.96, 0 )
+collision_mask = 13
+spring_length = 2.0
 
 [node name="Camera" type="Camera" parent="CameraTarget" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )

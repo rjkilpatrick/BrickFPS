@@ -80,6 +80,17 @@ pause={
  ]
 }
 
+[layer_names]
+
+3d_render/layer_1="World"
+3d_physics/layer_1="World"
+3d_render/layer_2="Props"
+3d_physics/layer_2="Props"
+3d_render/layer_3="Players"
+3d_physics/layer_3="Players"
+3d_render/layer_4="Pickups"
+3d_physics/layer_4="Pickups"
+
 [rendering]
 
 environment/default_environment="res://levels/common/default_environment.tres"
