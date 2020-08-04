@@ -21,5 +21,4 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, -0.02 )
 shape = SubResource( 2 )
 
-[node name="Minifigure" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+[node name="MinifigureContainer" parent="." instance=ExtResource( 1 )]

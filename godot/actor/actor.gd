@@ -17,6 +17,8 @@ const SPRINT_ACCELERATION = WALK_ACCELERATION * 1.5
 onready var CROUCH_MOVE_SPEED = DEFAULT_MOVE_SPEED * 0.6
 const CROUCH_ACCELERATION = WALK_ACCELERATION
 
+# TODO: Add terminal velocity
+
 var velocity = Vector3.ZERO
 
 # -----------------------
