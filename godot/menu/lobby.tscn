@@ -53,21 +53,27 @@ margin_bottom = 864.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ServerOwner" type="Label" parent="MainPanel/MatchInfo"]
+[node name="PrelobbyButton" type="Button" parent="MainPanel/MatchInfo"]
 margin_right = 892.0
-margin_bottom = 14.0
+margin_bottom = 20.0
+text = "Back to prelobby"
+
+[node name="ServerOwner" type="Label" parent="MainPanel/MatchInfo"]
+margin_top = 24.0
+margin_right = 892.0
+margin_bottom = 38.0
 text = "Party leader: [Player]"
 
 [node name="MapTextureRect" type="TextureRect" parent="MainPanel/MatchInfo"]
-margin_top = 18.0
+margin_top = 42.0
 margin_right = 892.0
-margin_bottom = 268.0
+margin_bottom = 292.0
 texture = SubResource( 1 )
 
 [node name="MapSelector" type="OptionButton" parent="MainPanel/MatchInfo"]
-margin_top = 272.0
+margin_top = 296.0
 margin_right = 892.0
-margin_bottom = 292.0
+margin_bottom = 316.0
 
 [node name="VSeparator" type="VSeparator" parent="MainPanel"]
 margin_left = 896.0
@@ -87,4 +93,5 @@ margin_top = 920.0
 margin_right = 1796.0
 margin_bottom = 940.0
 text = "Start game"
+[connection signal="pressed" from="MainPanel/MatchInfo/PrelobbyButton" to="." method="_on_PrelobbyButton_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]

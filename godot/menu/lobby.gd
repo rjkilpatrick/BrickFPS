@@ -97,3 +97,7 @@ remotesync func start_level(level_idx):
 func _on_StartButton_pressed() -> void:
 	level_idx = map_selector.selected
 	rpc("start_level", level_list[level_idx])
+
+
+func _on_PrelobbyButton_pressed() -> void:
+	go_back_to_prelobby()
