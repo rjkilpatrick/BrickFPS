@@ -10,3 +10,5 @@ script = ExtResource( 1 )
 
 [node name="BodyCollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
+
+[node name="PlayerPositionHolder" type="Spatial" parent="."]

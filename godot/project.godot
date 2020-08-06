@@ -15,19 +15,25 @@ _global_script_classes=[ {
 "path": "res://actor/actor.gd"
 }, {
 "base": "KinematicBody",
-"class": "Vehicle",
+"class": "VehicleFlying",
 "language": "GDScript",
-"path": "res://vehicles/vehicle/vehicle.gd"
+"path": "res://vehicles/vehicle/vehicle_flying.gd"
 }, {
 "base": "Position3D",
 "class": "VehiclePosition",
 "language": "GDScript",
 "path": "res://vehicles/vehicle/vehicle_position.gd"
+}, {
+"base": "KinematicBody",
+"class": "VehicleWalking",
+"language": "GDScript",
+"path": "res://vehicles/vehicle/vehicle_walking.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
-"Vehicle": "",
-"VehiclePosition": ""
+"VehicleFlying": "",
+"VehiclePosition": "",
+"VehicleWalking": ""
 }
 
 [application]
@@ -41,10 +47,6 @@ config/icon="res://icon.png"
 
 Network="*res://network.gd"
 GameLoader="*res://game_manager.gd"
-
-[debug]
-
-shapes/navigation/geometry_color=Color( 0.501961, 0, 1, 0.4 )
 
 [display]
 
@@ -100,6 +102,16 @@ interact={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
+land={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+leave_vehicle={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [layer_names]
 
@@ -108,13 +120,10 @@ interact={
 3d_render/layer_2="Props"
 3d_physics/layer_2="Props"
 3d_render/layer_3="Players"
-3d_physics/layer_3="Players"
+3d_physics/layer_3="Vehicles"
 3d_render/layer_4="Pickups"
-3d_physics/layer_4="Pickups"
-
-[physics]
-
-3d/default_gravity=9.807
+3d_physics/layer_4="Players"
+3d_physics/layer_5="Pickups"
 
 [rendering]
 
