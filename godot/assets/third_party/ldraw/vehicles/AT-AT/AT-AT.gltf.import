@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/AT-AT.gltf-9588b52e36cfa4bd4e8345dfdc44b974.scn"
+path="res://.import/AT-AT.gltf-400f888d82a604dc544e538cfa490932.scn"
 
 [deps]
 
-source_file="res://vehicles/empire/AT-AT/AT-AT.gltf"
-dest_files=[ "res://.import/AT-AT.gltf-9588b52e36cfa4bd4e8345dfdc44b974.scn" ]
+source_file="res://assets/third_party/ldraw/vehicles/AT-AT/AT-AT.gltf"
+dest_files=[ "res://.import/AT-AT.gltf-400f888d82a604dc544e538cfa490932.scn" ]
 
 [params]
 

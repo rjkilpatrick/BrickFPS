@@ -1,6 +1,7 @@
 extends Actor
 
 var is_paused := false setget _set_pause
+var in_vehicle := false # E.g. in a vehicle
 
 # -----------------------
 # Movement
@@ -19,7 +20,7 @@ var hvel = Vector3.ZERO
 
 # -----------------------
 # Camera controls
-export var DEFAULT_MOUSE_SENSITIVITY = 0.1
+export var DEFAULT_MOUSE_SENSITIVITY = 0.1 # TODO: Move to settings global
 var _mouse_sensitivity = DEFAULT_MOUSE_SENSITIVITY
 onready var camera_target = $"CameraTarget"
 onready var camera = $"CameraTarget/Camera"
@@ -27,6 +28,7 @@ var is_mouse_captured = false setget _set_mouse_captured
 
 # -----------------------
 # Weapons
+onready var aim_cast = $CameraTarget/Camera/AimCast
 
 # -----------------------
 # UI
@@ -50,7 +52,8 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	process_input(delta)
-	process_movement(delta)
+	if not in_vehicle:
+		process_movement(delta)
 	
 	if is_online:
 		rset_unreliable("puppet_position", global_transform.origin)
@@ -58,7 +61,7 @@ func _physics_process(delta: float) -> void:
 		rset_unreliable("puppet_rotation", rotation)
 
 
-func process_input(delta: float) -> void:
+func process_input(_delta: float) -> void:
 	# -----------------------
 	# Movement
 	var input_vector = Vector2(
@@ -89,17 +92,28 @@ func process_input(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("pause"):
 		self.is_paused = not self.is_paused
+	
+	# -----------------------
+	# Interacting
+	if Input.is_action_just_pressed("interact"):
+		aim_cast.force_raycast_update()
+		
+		if aim_cast.is_colliding():
+			var target = aim_cast.get_collider()
+			if target.has_method("interact"):
+				target.interact(self)
 
 
 func _input(event: InputEvent) -> void:
-	# -----------------------
-	# Mouse movement
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		# Rotate around self when moving in viewport x-plane
-		self.rotate_y(deg2rad(event.relative.x * _mouse_sensitivity * -1))
-		# Rotate camera about gimbal (target) when mouse moves in y-plane
-		camera_target.rotate_x(deg2rad(event.relative.y * _mouse_sensitivity * -1))
-		camera_target.rotation.x = clamp(camera_target.rotation.x, -deg2rad(70), deg2rad(90))
+	if !in_vehicle: #TODO: Change to unhandled input
+		# -----------------------
+		# Mouse movement
+		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			# Rotate around self when moving in viewport x-plane
+			self.rotate_y(deg2rad(event.relative.x * _mouse_sensitivity * -1))
+			# Rotate camera about gimbal (target) when mouse moves in y-plane
+			camera_target.rotate_x(deg2rad(event.relative.y * _mouse_sensitivity * -1))
+			camera_target.rotation.x = clamp(camera_target.rotation.x, -deg2rad(70), deg2rad(90))
 
 
 func process_movement(delta: float) -> void:
@@ -135,8 +149,11 @@ func process_movement(delta: float) -> void:
 	velocity.z = hvel.z
 	
 	velocity = move_and_slide(velocity, Vector3.UP, true, 4)
+	# TODO: Add <https://kidscancode.org/godot_recipes/physics/kinematic_to_rigidbody/>
 
 
+# -----------------------
+# HUD
 func _set_pause(new_pause: bool) -> void:
 	is_paused = new_pause
 	if is_paused:
@@ -157,9 +174,31 @@ func _set_mouse_captured(new_is_captured: bool) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func update_hud(delta: float) -> void:
+func update_hud(_delta: float) -> void:
 	pass
 
 
 func _on_PauseMenu_popup_hide() -> void:
 	self.is_paused = false
+
+
+# -----------------------
+# Enter/exit vehicles
+func enter_vehicle() -> void:
+	disable_collision_shapes()
+	in_vehicle = true
+
+
+func leave_vehicle() -> void:
+	enable_collision_shapes()
+	in_vehicle = false
+
+
+func disable_collision_shapes() -> void:
+	$BodyCollisionShape.disabled = true
+	$FeetCollisionShape.disabled = true
+
+
+func enable_collision_shapes() -> void:
+	$BodyCollisionShape.disabled = false
+	$FeetCollisionShape.disabled = false

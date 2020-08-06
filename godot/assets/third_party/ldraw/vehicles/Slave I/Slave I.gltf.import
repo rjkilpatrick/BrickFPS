@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/AT-ST.gltf-4e0c25a6588f1ee449e50fbb99cfdd99.scn"
+path="res://.import/Slave I.gltf-fa17f78ea4ae439302dd723c51c77694.scn"
 
 [deps]
 
-source_file="res://vehicles/empire/AT-ST/AT-ST.gltf"
-dest_files=[ "res://.import/AT-ST.gltf-4e0c25a6588f1ee449e50fbb99cfdd99.scn" ]
+source_file="res://assets/third_party/ldraw/vehicles/Slave I/Slave I.gltf"
+dest_files=[ "res://.import/Slave I.gltf-fa17f78ea4ae439302dd723c51c77694.scn" ]
 
 [params]
 

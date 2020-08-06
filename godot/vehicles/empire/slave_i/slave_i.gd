@@ -5,7 +5,7 @@ TODO:
 	Refactor into general starfighter script
 """
 
-extends KinematicBody
+extends VehicleFlying
 
 enum {LANDED, FLYING, LAUNCHING, LANDING}
 
