@@ -1,6 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://player/hud/chatbox.gd" type="Script" id=1]
+[ext_resource path="res://actor/player/hud/chatbox.gd" type="Script" id=1]
+
+
+
 
 
 [node name="Chatbox" type="Control"]
