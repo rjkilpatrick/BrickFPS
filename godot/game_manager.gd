@@ -36,7 +36,7 @@ remote func configure_level(which_level: String):
 	var ai_scene = load("res://actor/ai_player.tscn")
 	for index in range(0, ai_count):
 		assert(false) # FIX
-		var ai = actor_scene.instance()
+		var ai = ai_scene.instance()
 		ai.set_network_master(Network.SERVER_ID)
 		ai.set_name("ai" + str(index))
 		player_spawn.add_child(ai)
@@ -70,4 +70,4 @@ remotesync func post_configure_game():
 # During game
 
 # -----------------
-# End game
+# Post game
